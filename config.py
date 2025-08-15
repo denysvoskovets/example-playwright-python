@@ -6,7 +6,7 @@ from enum import Enum
 
 class Browser(str, Enum):
     CHROMIUM = 'chromium'
-    WEBKIT = 'webkit',
+    WEBKIT = 'webkit'
     FIREFOX = 'firefox'
 
 class TestUser(BaseModel):
