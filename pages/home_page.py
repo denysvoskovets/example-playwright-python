@@ -1,10 +1,11 @@
 from components.navbar_component import NavbarComponent
+from config import settings
 from elements.label import Label
 from pages.base_page import BasePage
 
 
 class HomePage(BasePage):
-    URL = "https://www.automationexercise.com/"
+    URL = str(settings.app_url)
 
     def __init__(self, page):
         super().__init__(page)
@@ -16,7 +17,7 @@ class HomePage(BasePage):
         self.category_section = Label(page, 'div.category-products', 'Category section')
 
     def navigate(self):
-        super().navigate(self.URL)
+        super().navigate(str(settings.app_url))
 
     def check_visible_features(self):
         self.features_section.check_visible()

@@ -1,6 +1,9 @@
+from urllib.parse import urljoin
+
 import allure
 
 from components.navbar_component import NavbarComponent
+from config import settings
 from elements.input import Input
 from elements.button import Button
 from elements.label import Label
@@ -9,7 +12,7 @@ from playwright.sync_api import Page, expect
 
 
 class LoginPage(BasePage):
-    URL = "https://www.automationexercise.com/login"
+    URL = urljoin(str(settings.app_url), "/login")
 
     def __init__(self, page: Page):
         super().__init__(page)

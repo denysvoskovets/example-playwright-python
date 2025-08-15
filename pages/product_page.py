@@ -1,5 +1,7 @@
 import time
+from urllib.parse import urljoin
 
+from config import settings
 from pages.base_page import BasePage
 from elements.input import Input
 from elements.button import Button
@@ -7,7 +9,7 @@ from elements.label import Label
 
 
 class ProductPage(BasePage):
-    URL = "https://www.automationexercise.com/products"
+    URL = urljoin(str(settings.app_url), "/products")
 
     def __init__(self, page):
         super().__init__(page)
