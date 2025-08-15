@@ -6,6 +6,8 @@ from typing import Pattern
 from elements.button import Button
 import re
 
+from pages.product_page import ProductPage
+
 
 class NavbarComponent(BaseComponent):
     def __init__(self, page: Page):
@@ -25,6 +27,7 @@ class NavbarComponent(BaseComponent):
     @allure.step('Navigate to products via Navigation bar')
     def click_products(self):
         self.navigate(self.products_button.get_locator(), (re.compile(r".*/products")))
+        return ProductPage(self.page)
 
     @allure.step('Navigate to cart via Navigation bar')
     def click_cart(self):
