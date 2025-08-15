@@ -29,12 +29,12 @@ jobs:
 
       - name: Create .env file from GitHub Secrets
         run: |
-          echo "APP_URL=${{ secrets.APP_URL }}" >> .env
+          echo "APP_URL=${{ secrets.APP_URL }}" > .env
           echo "HEADLESS=${{ secrets.HEADLESS }}" >> .env
-          echo "BROWSERS=${{ secrets.BROWSERS }}" >> .env
-          echo "TEST_USER__EMAIL=${{ secrets.TEST_USER__EMAIL }}" >> .env
-          echo "TEST_USER__USERNAME=${{ secrets.TEST_USER__USERNAME }}" >> .env
-          echo "TEST_USER__PASSWORD=${{ secrets.TEST_USER__PASSWORD }}" >> .env
+          echo 'BROWSERS=${{ secrets.BROWSERS }}' >> .env
+          echo "TEST_USER.EMAIL=${{ secrets.TEST_USER_EMAIL }}" >> .env
+          echo "TEST_USER.USERNAME=${{ secrets.TEST_USER_USERNAME }}" >> .env
+          echo "TEST_USER.PASSWORD=${{ secrets.TEST_USER_PASSWORD }}" >> .env
 
       - name: Run Playwright tests with pytest and generate allure
         run: |
