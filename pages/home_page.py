@@ -11,7 +11,7 @@ class HomePage(BasePage):
 
         self.navbar = NavbarComponent(page)
 
-        self.account_created_label = Label(page, 'h2[data-qa="account-created"]', 'Account created label')
+        self.account_created_label = Label(page, 'h2[data-qa="account-created"]', 'Account created')
         self.features_section = Label(page, 'div.features_items', 'Features section')
         self.category_section = Label(page, 'div.category-products', 'Category section')
 

@@ -12,13 +12,13 @@ class ProductPage(BasePage):
     def __init__(self, page):
         super().__init__(page)
 
-        self.product_title = Label(page, "div.product-information h2", "Product title")
-        self.view_cart_button = Button(page, "text=View Cart", "View Cart button")
-        self.add_cart_button = Button(page, 'button.btn.btn-default.cart', "Add to cart button")
+        self.product_title = Label(page, "div.product-information h2", "Product")
+        self.view_cart_button = Button(page, "text=View Cart", "View Cart")
+        self.add_cart_button = Button(page, 'button.btn.btn-default.cart', "Add to cart")
 
-        self.search_input = Input(page, "#search_product", "Search input")
-        self.submit_search_button = Button(page, "#submit_search", "Submit search button")
-        self.view_product_buttons = Label(page, 'a:has-text("View Product")', "View Product buttons")
+        self.search_input = Input(page, "#search_product", "Search")
+        self.submit_search_button = Button(page, "#submit_search", "Submit search")
+        self.view_product_buttons = Label(page, 'a:has-text("View Product")', "View Product")
 
     def navigate(self):
         super().navigate(self.URL)

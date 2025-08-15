@@ -1,4 +1,5 @@
 from playwright.sync_api import Page
+import allure
 
 
 class BasePage:
@@ -6,7 +7,9 @@ class BasePage:
         self.page = page
 
     def navigate(self, url: str):
-        self.page.goto(url, wait_until="domcontentloaded")
+        with allure.step(f'Opening the url {url}'):
+            self.page.goto(url, wait_until="domcontentloaded")
 
     def reload(self):
-        self.page.reload(wait_until="domcontentloaded")
+        with allure.step(f'Opening the url {self.page.url}'):
+            self.page.reload(wait_until="domcontentloaded")
