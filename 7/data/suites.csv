@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Aug 16 07:17:10 GMT 2025","Sat Aug 16 07:17:11 GMT 2025","1070","tests","test_authorization","TestAuthorization","","","User login with wrong email or password",""
+"passed","Sat Aug 16 07:17:15 GMT 2025","Sat Aug 16 07:17:16 GMT 2025","1360","tests","test_product","TestProduct","","","Add product to cart",""
+"passed","Sat Aug 16 07:17:13 GMT 2025","Sat Aug 16 07:17:14 GMT 2025","1040","tests","test_authorization","TestAuthorization","","","User login with wrong email or password",""
+"passed","Sat Aug 16 07:17:19 GMT 2025","Sat Aug 16 07:17:21 GMT 2025","2105","tests","test_registration","TestRegistration","","","Register new user",""
+"passed","Sat Aug 16 07:17:16 GMT 2025","Sat Aug 16 07:17:18 GMT 2025","2112","tests","test_registration","TestRegistration","","","Register new user",""
+"passed","Sat Aug 16 07:17:12 GMT 2025","Sat Aug 16 07:17:13 GMT 2025","1053","tests","test_authorization","TestAuthorization","","","User login with wrong email or password",""
+"passed","Sat Aug 16 07:17:09 GMT 2025","Sat Aug 16 07:17:10 GMT 2025","1211","tests","test_authorization","TestAuthorization","","","User successful login",""

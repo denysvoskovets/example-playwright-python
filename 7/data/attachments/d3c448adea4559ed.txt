@@ -1,0 +1,6 @@
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="signup-name"]
+INFO     INPUT_ELEMENT:input.py:19 Fill input "Register name" with info russellrobert
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="signup-email"]
+INFO     INPUT_ELEMENT:input.py:19 Fill input "Register email" with info richard11_50d6b@denys.com
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator [data-qa="signup-button"]
+INFO     BASE_ELEMENT:base_element.py:35 Clicking input "Register"
