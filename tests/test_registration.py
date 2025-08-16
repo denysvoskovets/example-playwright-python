@@ -10,7 +10,7 @@ import allure
 @pytest.mark.regression
 @pytest.mark.registration
 class TestRegistration:
-
+    @pytest.mark.smoke
     @allure.title('Register new user')
     @pytest.mark.parametrize("user_data", ["normal", "long_names"], indirect=True)
     def test_register(self, user_data, login_page: LoginPage, registration_page: RegistrationPage,

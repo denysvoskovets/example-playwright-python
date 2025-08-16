@@ -3,7 +3,7 @@ import allure
 
 from pages.login_page import LoginPage
 
-
+@pytest.mark.smoke
 @pytest.mark.authorization
 @pytest.mark.regression
 class TestAuthorization:

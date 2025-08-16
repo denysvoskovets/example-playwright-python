@@ -1,12 +1,19 @@
 name: UI testing
 
 on:
-  push:
-      branches:
-        - main
   pull_request:
-      branches:
-        - main
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description: "Which tests to run"
+        required: true
+        default: all_tests
+        type: choice
+        options:
+          - all_tests
+          - smoke_tests
 
 jobs:
   run-tests:
@@ -14,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up python
         uses: actions/setup-python@v4
@@ -36,12 +43,16 @@ jobs:
           echo "TEST_USER.USERNAME=${{ secrets.TEST_USER_USERNAME }}" >> .env
           echo "TEST_USER.PASSWORD=${{ secrets.TEST_USER_PASSWORD }}" >> .env
 
-      - name: Run Playwright tests with pytest and generate allure
-        run: |
-          pytest -m regression --alluredir=./allure-results
+      - name: Run all tests
+        if: ${{ github.event.inputs.deployment_target == 'all_tests' || github.event_name == 'pull_request' }}
+        run: pytest --tracing=retain-on-failure --alluredir=allure-results
+
+      - name: Run smoke tests
+        if: ${{ github.event.inputs.deployment_target == 'smoke_tests' }}
+        run: pytest -m smoke --tracing=retain-on-failure --alluredir=allure-results
 
       - name: Get Allure history
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
@@ -59,5 +70,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh_pages
+          PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
