@@ -1,0 +1,12 @@
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-email"]
+INFO     INPUT_ELEMENT:input.py:19 Fill input "Email" with info someuser@some.some
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-email"]
+INFO     INPUT_ELEMENT:input.py:26 Checking that input "Email" has a value someuser@some.some
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-password"]
+INFO     INPUT_ELEMENT:input.py:19 Fill input "Password" with info 123456
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-password"]
+INFO     INPUT_ELEMENT:input.py:26 Checking that input "Password" has a value 123456
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator [data-qa="login-button"]
+INFO     BASE_ELEMENT:base_element.py:35 Clicking button "Login"
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator //p[text()="Your email or password is incorrect!"]
+INFO     BASE_ELEMENT:base_element.py:42 Checking that label "Error" is visible

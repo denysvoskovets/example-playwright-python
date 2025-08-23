@@ -1,0 +1,10 @@
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-email"]
+INFO     INPUT_ELEMENT:input.py:19 Fill input "Email" with info flamingo@gmail.com
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-email"]
+INFO     INPUT_ELEMENT:input.py:26 Checking that input "Email" has a value flamingo@gmail.com
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-password"]
+INFO     INPUT_ELEMENT:input.py:19 Fill input "Password" with info 123456
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator input[data-qa="login-password"]
+INFO     INPUT_ELEMENT:input.py:26 Checking that input "Password" has a value 123456
+INFO     BASE_ELEMENT:base_element.py:21 Getting locator [data-qa="login-button"]
+INFO     BASE_ELEMENT:base_element.py:35 Clicking button "Login"
